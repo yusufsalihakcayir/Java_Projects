@@ -1,0 +1,21 @@
+public class SalariedEmployee extends Employee {
+
+    private double weeklySalary;
+
+    public SalariedEmployee(String firstName, String lastName, int SSN, double weeklySalary) {
+        super(firstName,lastName,SSN);
+        this.weeklySalary=weeklySalary;
+    }
+
+    public double getWeeklySalary() {return weeklySalary;}
+
+    @Override
+    public double earning() {
+        return weeklySalary;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Weekly Salary: " + weeklySalary;
+    }
+}
